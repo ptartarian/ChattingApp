@@ -10,7 +10,7 @@ import android.util.Log;
 
 public class ConnectServer extends AsyncTask<Void,Void,XMPPConnection > {
     
-    private static final String HOST = "192.168.0.103";
+    private static final String HOST = "192.168.1.84";
     private static final int PORT = 5222;
     private XMPPConnection ConnectionResult;
     private ConnectionConfiguration connConfig;

@@ -62,10 +62,4 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/signout"
-        android:layout_width="123dp"
-        android:layout_height="wrap_content"
-        android:text="Sing out" />
-
 </LinearLayout>

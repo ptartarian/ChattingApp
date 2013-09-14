@@ -16,32 +16,8 @@
         android:layout_alignParentTop="true"
         android:ems="10"
         android:hint="Saisir utilisateur" />
-
-    <Button
-        android:id="@+id/signup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/passwordUp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/passwordUp"
-        android:layout_marginBottom="124dp"
-        android:onClick="SignUp"
-        android:text="S&apos;inscrire" />
-
-    <EditText
-        android:id="@+id/confirmUp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/signup"
-        android:layout_alignLeft="@+id/signup"
-        android:layout_marginBottom="43dp"
-        android:ems="10"
-        android:hint="Confirmer mot de passe"
-        android:inputType="textPassword" >
-
-        <requestFocus />
-    </EditText>
-
+    
+    
     <EditText
         android:id="@+id/passwordUp"
         android:layout_width="fill_parent"
@@ -52,5 +28,27 @@
         android:ems="10"
         android:hint="Saisir mot de passe"
         android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/confirmUP"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/passwordUp"
+        android:layout_below="@+id/passwordUp"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Confirmer le mot de passe"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/confirmUP"
+        android:layout_alignRight="@+id/confirmUP"
+        android:layout_below="@+id/confirmUP"
+        android:layout_marginTop="64dp"
+        android:onClick="SignUp"
+        android:text="S&apos;inscrire" />
 
 </RelativeLayout>

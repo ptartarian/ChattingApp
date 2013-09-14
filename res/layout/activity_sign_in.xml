@@ -15,7 +15,7 @@
         android:layout_alignLeft="@+id/username"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/username"
-        android:text="Naviguer la page d&apos;inscription" 
+        android:text="Naviguer à la page d&apos;inscription" 
         android:onClick="GoToSignUp"/>
     
     <EditText

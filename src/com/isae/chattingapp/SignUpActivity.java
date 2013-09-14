@@ -5,6 +5,12 @@ import java.util.Map;
 
 import org.jivesoftware.smack.AccountManager;
 import org.jivesoftware.smack.XMPPConnection;
+import org.jivesoftware.smack.XMPPException;
+import org.jivesoftware.smack.provider.ProviderManager;
+import org.jivesoftware.smackx.Form;
+import org.jivesoftware.smackx.ReportedData;
+import org.jivesoftware.smackx.search.UserSearch;
+import org.jivesoftware.smackx.search.UserSearchManager;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -32,7 +38,8 @@ public class SignUpActivity extends Activity {
 	public void SignUp(View view){
 		String username = ((EditText) findViewById(R.id.usernameUp)).getText().toString();
 		String password = ((EditText) findViewById(R.id.passwordUp)).getText().toString();
-		String ConfirmPassword = ((EditText) findViewById(R.id.confirmUp)).getText().toString();
+		String ConfirmPassword = ((EditText) findViewById(R.id.confirmUP)).getText().toString();
+		
 		if (username.length() == 0 || password.length() == 0 || ConfirmPassword.length() == 0){
 			alert.display_alert("Tous les champs doivent être saisis.");
 			return;
@@ -49,7 +56,29 @@ public class SignUpActivity extends Activity {
 //		if (am.getAccountAttribute(username) != null) {
 //			alert.display_alert("l'utilisateur "+username+" deja existant.");
 //			return;
-//		} 
+//		}
+		
+//		configure(ProviderManager.getInstance());
+//		 UserSearchManager usm = new UserSearchManager(XmppConnectionSignUp);
+//		 try {
+//			 Form searchForm = usm.getSearchForm("search." + XmppConnectionSignUp.getServiceName());		
+//	         Form answerForm = searchForm.createAnswerForm();
+//	         answerForm.setAnswer("Username", true);
+//	         answerForm.setAnswer("search", username);
+//	         
+//	         ReportedData data = usm.getSearchResults(answerForm, "search." + XmppConnectionSignUp.getServiceName());
+//	         
+//	         int count = 0;
+//	         while(data.getRows().hasNext()){
+//	        	 count++;
+//	        	 System.out.println("user Exists :" + count + " times");
+//       	 
+//        }
+//		} catch (XMPPException e) {
+//			System.out.println("XMPPException tHrOoWWNnnnn :D");
+//			return;
+//		}
+		 
 		
      	Map<String, String> mp = new HashMap<String, String>();
      	mp.put("username", username);
@@ -70,5 +99,10 @@ public class SignUpActivity extends Activity {
      	}
      	  
 	}
+
+//	public void configure(ProviderManager pm) {
+//		//  User Search
+//			pm.addIQProvider("query","jabber:iq:search", new UserSearch.Provider());
+//		}
 
 }

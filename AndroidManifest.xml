@@ -16,11 +16,6 @@
         <activity
             android:name="com.isae.chattingapp.ChattingApp"
             android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.isae.chattingapp.SignUpActivity"
@@ -29,6 +24,15 @@
         <activity
             android:name="com.isae.chattingapp.SignInActivity"
             android:label="@string/title_activity_sign_in" >
+        </activity>
+        <activity
+            android:name="com.isae.chattingapp.LauncherActivity"
+            android:label="@string/title_activity_launcher" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 
